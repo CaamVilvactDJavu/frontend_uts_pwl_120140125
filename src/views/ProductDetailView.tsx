@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import defaultProductImage from "../assets/deafaultProducts.png";
+import store from "../assets/store.png";
 import useProduct from "../custom_hooks/ProductManager";
 import ImageVerifier from "../custom_hooks/imageVerifier";
 import { apiClient } from "../api/config";
@@ -63,7 +63,7 @@ const ProductDetailView = () => {
 
                     <CardContent className="flex flex-col md:flex-row items-center gap-8 py-6">
                         <div className="bg-gray-100 rounded-lg w-full md:w-1/3">
-                            <img src={isImageValid ? data?.image_url : defaultProductImage} className="object-cover w-full h-full rounded-lg" />
+                            <img src={isImageValid ? data?.image_url : Store} className="object-cover w-full h-full rounded-lg" />
                         </div>
                         <div className="flex-1 space-y-4 md:space-y-4 text-center md:text-left">
                             <h2 className="font-extrabold text-5xl underline-4 ">{data?.name}</h2>

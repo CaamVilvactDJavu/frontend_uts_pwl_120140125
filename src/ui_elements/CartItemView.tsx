@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import defaultProductImage from "../assets/deafaultProducts.png";
+import store from "../assets/store.png";
 import imageVerifier from "../custom_hooks/imageVerifier";
 import { CartContextValue, CartItem, useCart } from "../custom_hooks/cartManager";
 import { Button } from "@/components/ui/button";
@@ -29,7 +29,7 @@ const CartItemView: React.FC<{
             </CardHeader>
             <CardContent className="flex justify-center">
                 <img
-                    src={isImageValid ? product.image_url : defaultProductImage}
+                    src={isImageValid ? product.image_url : store}
                     className="object-contain w-36 h-40"
                 />
             </CardContent>
