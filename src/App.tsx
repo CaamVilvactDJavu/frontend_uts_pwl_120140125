@@ -4,26 +4,26 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import RootLayout from "./layouts/RootLayout";
-import HomePage from "./pages/HomePage";
-import CartPage from "./pages/CartPage";
-import CreateProductsPage from "./pages/CreateProductsPage";
-import DetailProductPage from "./pages/DetailProductPage";
-import EditProductPage from "./pages/EditProductPage";
-import CheckoutPage from "./pages/CheckoutPage";
+import MainWrapper from "./ui_elements/MainWrapper";
+import LandingView from "./views/LandingView";
+import BasketView from "./views/BasketView";
+import NewProductView from "./views/NewProductView";
+import ProductDetailView from "./views/ProductDetailView";
+import UpdateProductView from "./views/UpdateProductView";
+import PaymentView from "./views/PaymentView";
 
 const App = () => {
   // create routes
   const routes = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route element={<RootLayout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="cart" element={<CartPage />} />
-          <Route path="create-product" element={<CreateProductsPage />} />
-          <Route path="detail-product/:id" element={<DetailProductPage />} />
-          <Route path="edit-product/:id" element={<EditProductPage />} />
-          <Route path="checkout" element={<CheckoutPage />} />
+        <Route element={<MainWrapper />}>
+          <Route path="/" element={<LandingView />} />
+          <Route path="cart" element={<BasketView />} />
+          <Route path="create-product" element={<NewProductView />} />
+          <Route path="detail-product/:id" element={<ProductDetailView />} />
+          <Route path="edit-product/:id" element={<UpdateProductView />} />
+          <Route path="checkout" element={<PaymentView />} />
         </Route>
       </>
     )

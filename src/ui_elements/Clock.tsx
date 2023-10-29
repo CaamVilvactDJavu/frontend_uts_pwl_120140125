@@ -1,7 +1,6 @@
-
 import React from 'react'
 
-export function Time() {
+export function Clock() {
     const [currentTime, setCurrentTime] = React.useState(new Date());
 
     const formattedTime = currentTime.toLocaleTimeString('id-ID', {
