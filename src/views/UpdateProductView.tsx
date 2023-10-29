@@ -52,7 +52,7 @@ const UpdateProductView = () => {
                                 <Button onClick={() => navigate("/")}>
                                     <ChevronLeftIcon />
                                 </Button>
-                                <h1 className="font-bold text-lg underline underline-offset-2">Edit Product</h1>
+                                <h1 className="font-bold text-2xl underline underline-offset-2">Update Product</h1>
                             </div>
 
                             <form
@@ -67,28 +67,12 @@ const UpdateProductView = () => {
                                     {...register("name", { required: true })}
                                 />
 
-                                <Label htmlFor="price" className="mt-2">Price</Label>
-                                <Input
-                                    type="number"
-                                    id="price"
-                                    defaultValue={data?.price}
-                                    {...register("price", { required: true })}
-                                />
-
                                 <Label htmlFor="description" className="mt-2">Description</Label>
                                 <Input
                                     type="text"
                                     id="description"
                                     defaultValue={data?.description}
                                     {...register("description", { required: true })}
-                                />
-
-                                <Label htmlFor="image_url" className="mt-2">Product Image Link</Label>
-                                <Input
-                                    type="text"
-                                    id="image_url"
-                                    defaultValue={data?.image_url}
-                                    {...register("image_url", { required: true })}
                                 />
 
                                 <Label htmlFor="stock" className="mt-2">Stock</Label>
@@ -99,8 +83,25 @@ const UpdateProductView = () => {
                                     {...register("stock", { required: true })}
                                 />
 
+                                <Label htmlFor="price" className="mt-2">Price</Label>
+                                <Input
+                                    type="number"
+                                    id="price"
+                                    defaultValue={data?.price}
+                                    {...register("price", { required: true })}
+                                />
+
+                                <Label htmlFor="image_url" className="mt-2">Product Image Url</Label>
+                                <Input
+                                    type="text"
+                                    id="image_url"
+                                    defaultValue={data?.image_url}
+                                    {...register("image_url", { required: true })}
+                                />
+
+
                                 <Button type="submit" className="mt-4 w-full">
-                                    Submit
+                                    Update
                                 </Button>
                             </form>
                         </div>

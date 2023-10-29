@@ -43,7 +43,7 @@ const ProductItemView: React.FC<{
                     }}
                     className="hover:outline-slate-950 hover:bg-white hover:text-black"
                 >
-                    Add to Cart<ArchiveIcon className="mr-2" />
+                    Place in Basket<ArchiveIcon className="ml-2" />
                 </Button>
             </CardFooter>
         </Card>

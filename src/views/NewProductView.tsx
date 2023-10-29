@@ -40,7 +40,7 @@ const NewProductView = () => {
                         <Button onClick={() => navigate("/")}>
                             <ChevronLeftIcon />
                         </Button>
-                        <h1 className="font-bold text-lg underline underline-offset-2">Add Product</h1>
+                        <h1 className="font-bold text-2xl underline underline-offset-2">Create New Product</h1>
                     </div>
 
                     <form
@@ -54,25 +54,11 @@ const NewProductView = () => {
                             {...register("name", { required: true })}
                         />
 
-                        <Label htmlFor="price">Price</Label>
-                        <Input
-                            type="number"
-                            id="price"
-                            {...register("price", { required: true })}
-                        />
-
                         <Label htmlFor="description">Description</Label>
                         <Input
                             type="text"
                             id="description"
                             {...register("description", { required: true })}
-                        />
-
-                        <Label htmlFor="image_url">Product Image Link</Label>
-                        <Input
-                            type="text"
-                            id="image_url"
-                            {...register("image_url", { required: true })}
                         />
 
                         <Label htmlFor="stock">Stock</Label>
@@ -82,8 +68,22 @@ const NewProductView = () => {
                             {...register("stock", { required: true })}
                         />
 
+                        <Label htmlFor="price">Price</Label>
+                        <Input
+                            type="number"
+                            id="price"
+                            {...register("price", { required: true })}
+                        />
+
+                        <Label htmlFor="image_url">Product Image Url</Label>
+                        <Input
+                            type="text"
+                            id="image_url"
+                            {...register("image_url", { required: true })}
+                        />
+
                         <Button type="submit" className="mt-4 w-full">
-                            Submit
+                            Create
                         </Button>
                     </form>
                 </div>

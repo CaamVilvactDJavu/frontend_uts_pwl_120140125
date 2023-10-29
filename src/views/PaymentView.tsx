@@ -17,7 +17,6 @@ const PaymentView = () => {
 
     useEffect(() => {
         if (cartItems.length === 0) {
-            alert("Your cart is empty");
             navigate("/");
             return;
         }
@@ -62,7 +61,7 @@ const PaymentView = () => {
 
                 <CardContent>
                     {items.length === 0 ? (
-                        <CardDescription>Your cart is empty</CardDescription>
+                        <CardDescription></CardDescription>
                     ) : (
                         items.map((item) => (
                             <div className="flex justify-between items-center mb-4" key={item?.id}>

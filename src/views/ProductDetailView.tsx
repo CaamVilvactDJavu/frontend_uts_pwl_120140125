@@ -48,7 +48,7 @@ const ProductDetailView = () => {
                     </Button>
 
                     <CardHeader className="flex flex-col items-center justify-center py-8">
-                        <CardTitle className="mb-6 scroll-m-20 border-b pb-2 text-8xl font-semibold tracking-tight first:mt-0">Detail Product</CardTitle>
+                        <CardTitle className="mb-6 scroll-m-20 border-b pb-2 text-8xl font-semibold tracking-tight first:mt-0">Product Detail</CardTitle>
                         <div className="flex gap-2">
                             <Button variant="destructive" onClick={handleDelete}>
                                 Delete
@@ -75,12 +75,8 @@ const ProductDetailView = () => {
 
                     <CardFooter className="flex justify-between items-center py-8">
                         <Button onClick={() => addToCart(data)} className="mr-2">
-                            Add to Cart
+                            Place in Basket
                             <ArchiveIcon className="ml-2 text-xl" />
-                        </Button>
-                        <Button>
-                            Buy Now
-                            <HandIcon className="ml-2 text-xl" />
                         </Button>
                     </CardFooter>
                 </Card>

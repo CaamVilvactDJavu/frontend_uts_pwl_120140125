@@ -21,10 +21,10 @@ const LandingView = () => {
             ) : (
                 <main className="mx-4 md:mx-20 lg:mx-44 mt-6 mb-6">
                     <div className="flex flex-col items-center justify-center">
-                        <h1 className="scroll-m-20 border-b pb-2 text-8xl font-semibold tracking-tight first:mt-0">Products</h1>
+                        <h1 className="scroll-m-20 border-b pb-2 text-8xl font-semibold tracking-tight first:mt-0">Product</h1>
                         <div className="self-end mt-4">
                             <Button onClick={() => navigate("/create-product")}>
-                                Add product
+                                Create New Product
                                 <PlusCircledIcon className="inline-block ml-2" />
                             </Button>
                         </div>
